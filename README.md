@@ -6,7 +6,7 @@ Este projeto é um **Gerador de Recibo** simples que permite criar e imprimir re
 
 Você pode acessar a aplicação online através do seguinte link:
 
-[Gerador de Recibo](https://rolim8.github.io/Receipt-Generator-2.0/code/index.html)
+[Gerador de Recibo](https://rolim8.github.io/Gerador-de-Recibo_3.0/code/index.html)
 
 ## Funcionalidades
 
