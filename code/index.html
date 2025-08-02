@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OSNET RECIBO</title>
+    <link rel="icon" href="assets/icon.png" type="image/png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">GERADOR DE RECIBO - OSNET</h1>
+
+      <div class="form-container">
+        <div class="form-group">
+          <label for="valor">Valor (R$)</label>
+          <input
+            type="text"
+            id="valor"
+            class="valor-input"
+            placeholder="0,00"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="cliente">Nome do Cliente</label>
+          <input
+            type="text"
+            id="cliente"
+            placeholder="Digite o nome completo"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="servico">Serviço Prestado</label>
+          <input
+            type="text"
+            id="servico"
+            placeholder="Descreva o serviço"
+            required
+          />
+        </div>
+
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="personalizarData" />
+          <label for="personalizarData">Personalizar Data</label>
+          <input type="date" id="dataPersonalizada" class="hidden" />
+        </div>
+        <button class="btn btn-primary" onclick="gerarRecibo()">
+          Gerar Recibo
+        </button>
+      </div>
+
+      <div id="recibo" class="recibo-container hidden">
+        <div class="recibo-layout">
+          <div class="recibo-topo">
+            <div class="recibo-logo-info">
+              <img src="assets/logo.png" alt="Logo" class="logo" />
+              <div class="empresa-info">
+                O.S. Net Telecomunicações LTDA<br />
+                Rua Terêncio Correia Férrer, 340<br />
+                Lavras da Mangabeira - Ceará<br />
+                Telefone: (88) 99290-0506<br />
+              </div>
+            </div>
+            <div class="recibo-valor">
+              <div class="caixa-recibo">RECIBO</div>
+              <div class="caixa-valor">
+                Valor<br />
+                <span id="valorRecibo">R$ __,__</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="recibo-detalhes-com-borda">
+            <div class="recibo-dados">
+              <p>
+                Recebemos de
+                <span id="clienteNome" class="destaque">NOME DO CLIENTE</span
+                ><br />
+                Correspondente a
+                <span id="servicoDesc" class="destaque">SERVIÇO PRESTADO</span>
+              </p>
+
+              <div class="recibo-qrcode-assinatura">
+                <div class="qrcode">
+                  <img src="assets/qr-code.png" alt="QR Code" />
+                  <div class="pix-info">Chave: PIX<br />(88) 99290-0506</div>
+                </div>
+                <div class="assinatura-box">
+                  <img
+                    src="assets/sign.png"
+                    alt="Assinatura"
+                    class="assinatura-img"
+                  />
+                  <div class="assinatura-nome">ORLANDO LEITE ROLIM</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="recibo-data">
+            Recibo gerado em <span id="dataAtual">(DATA)</span>
+          </div>
+        </div>
+        <button class="btn btn-secondary" onclick="imprimirRecibo()">
+          Imprimir Recibo
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
