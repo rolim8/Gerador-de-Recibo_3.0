@@ -1,4 +1,3 @@
-```markdown
 # Gerador de Recibo
 
 Este projeto é um **Gerador de Recibo** simples que permite criar e imprimir recibos personalizados. A aplicação é baseada em HTML, CSS e JavaScript.
@@ -31,7 +30,6 @@ Você pode acessar a aplicação online através do seguinte link:
 ## Configurações de Impressão
 
 Garantir que o recibo seja centralizado no topo da página ao imprimir e que informações indesejadas como cabeçalhos e rodapés não apareçam.
-```
 
 ## 📜 Licença
 
